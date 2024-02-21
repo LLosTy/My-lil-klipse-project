@@ -1,21 +1,29 @@
-.content-box {
-    box-sizing: border-box;
-    height: 100%;
-}
-
-.page-layout{
+.page-layout {
     display: grid;
-    grid-template: "input output";
-    grid-template-columns: 1fr 1fr;
-    min-height: 100%;
+    grid-template-rows: 1fr auto; /* Initially set to have one row that fills available space and one row for the second element */
+    grid-template-columns: 100%; /* Full width columns */
+    width: 100%;
+    height: 100vh;
 }
 
-
-.language-klipse-eval-js{
-    grid-area: input;
+.language-klipse-eval-js,
+.klipse-result {
+    width: 100%; /* Ensure both elements occupy the full width of the container */
 }
 
-.klipse-result{
-    grid-area: output;
+.language-klipse-eval-js {
+    margin-bottom: 10px; /* Optional: add margin between the input and output sections */
 }
 
+@media only screen and (min-width: 768px) {
+    .page-layout {
+        grid-template-columns: repeat(2, 1fr); /* Split into two columns */
+        grid-template-rows: auto; /* Reset grid rows */
+        align-items: stretch; /* Ensure items stretch to fill the height */
+    }
+
+    .language-klipse-eval-js {
+        margin-bottom: 0; /* Reset margin for larger screens */
+        margin-right: 10px; /* Add margin between the input and output sections */
+    }
+}
