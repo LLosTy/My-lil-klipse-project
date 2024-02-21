@@ -1,0 +1,21 @@
+.content-box {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.page-layout{
+    display: grid;
+    grid-template: "input output";
+    grid-template-columns: 1fr 1fr;
+    min-height: 100%;
+}
+
+
+.language-klipse-eval-js{
+    grid-area: input;
+}
+
+.klipse-result{
+    grid-area: output;
+}
+
