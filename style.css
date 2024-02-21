@@ -1,11 +1,12 @@
 .page-layout {
-    margin-top: 40px;
-    /*display: grid;*/
-    /*grid-template-rows: 1fr auto; !* Initially set to have one row that fills available space and one row for the second element *!*/
-    /*grid-template-columns: 100%; !* Full width columns *!*/
-    /*width: 100%;*/
-    /*height: 20vh;*/
-    grid-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+    /*gap: 10px 0;*/
 }
 
 .work-sans{
@@ -21,7 +22,11 @@
 
 .klipse-result {
     /*width: 100%; !* Ensure both elements occupy the full width of the container *!*/
-    margin: 20px 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 45%;
+    order: 2;
+    margin: 30px 5px;
     border: 2px solid darkslateblue;
     border-radius: 5px;
     position: relative;
@@ -33,6 +38,7 @@
     content: "output";
     /*font-size: 20px;*/
     background-color: #fff;
+    color: darkslateblue;
     height: 13px;
     position: absolute;
     top: -9px;
@@ -40,7 +46,11 @@
 
 .klipse-snippet{
     /*width: 100%; !* Ensure both elements occupy the full width of the container *!*/
-    margin: 20px 0;
+    width: 45%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    order: 1;
+    margin: 30px 5px;
     border: 2px solid darkslateblue;
     border-radius: 5px;
     position: relative;
@@ -50,6 +60,7 @@
 .klipse-snippet::before {
     font-family: monospace;
     content: "input";
+    color: darkslateblue;
     /*font-size: 20px;*/
     background-color: #fff;
     height: 13px;
