@@ -8,10 +8,7 @@
     grid-gap: 10px;
 }
 
-.header{
-    font-weight: bold;
-    text-align: center;
-}
+
 
 .work-sans{
     font-family: "Work Sans", sans-serif;
@@ -20,14 +17,36 @@
     font-style: normal;
 }
 
+.header{
+    text-align: center;
+}
+
 .language-klipse-eval-js,
 .klipse-result {
     width: 100%; /* Ensure both elements occupy the full width of the container */
 }
 
+.input-group{
+    position: relative;
+    display: inline-block;
+}
+
+
+
 .CodeMirror{
     border-radius: 10px;
     border: solid darkslateblue 3px;
+}
+
+.input-label{
+    font-family: monospace;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    position: absolute;
+    left: 25px;
+    top: -7px;
+    padding: 0 2px;
 }
 
 .language-klipse-eval-js {
