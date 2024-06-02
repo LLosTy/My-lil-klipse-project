@@ -9,6 +9,12 @@
     /*gap: 10px 0;*/
 }
 
+
+.button-to-top{
+    position: fixed;
+    z-index: 3;
+}
+
 .work-sans{
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
@@ -67,3 +73,4 @@
     position: absolute;
     top: -9px;
 }
+
